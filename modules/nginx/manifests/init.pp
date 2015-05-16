@@ -1,5 +1,6 @@
 class nginx (
   $port = 80,
+  $document_root = "/var/www/html"
 ){
 
   $config_dir = $::osfamily ? {

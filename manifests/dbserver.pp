@@ -1,0 +1,3 @@
+class dbserver {
+  class {'mysql':}
+}

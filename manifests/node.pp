@@ -1,13 +1,12 @@
+import "webserver.pp"
+import "dbserver.pp"
+
 node /^www\..+\.dev$/ {
-  class {'nginx':
-    port => 8080,
-  }
+  class {"dbserver":}
 }
 
 node /^www\..+\.com$/ {
-  class {'nginx':
-    port => 80,
-  }
+  class {"webserver":}
 }
 
 node default {
